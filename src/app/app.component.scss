@@ -1,0 +1,224 @@
+@import '../scss/_vars';
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #dadada;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    >header {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 28px;
+        >span {
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin-right: 14px;
+            border-radius: 50%;
+            background-color: #57575750;
+            transition: all .3s ease-in;
+        }
+        >h1 {
+            display: flex;
+            flex-flow: column wrap;
+            font-family: $proxima;
+            font-size: 44px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.6px;
+            text-align: left;
+            color: rgba(0, 28, 119, 0.71);
+            >span {
+                font-size: 26px;
+            }
+        }
+    }
+    >section {
+        background-color: #fff;
+        border: solid 2px rgba(255, 255, 255, 0.39);
+        border-radius: 5px;
+        width: 450px;
+        height: 300px;
+        margin-bottom: 38px;
+        transition: all .3s ease-in;
+        >form {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            height: 100%;
+            transition: all .7s ease-in;
+            >label {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin: 14px 0;
+                opacity: 0.8;
+                font-family: $proxima;
+                font-size: 16px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                >input {
+                    width: 334px;
+                    height: 38px;
+                    border: solid 1px #afafaf;
+                    border-radius: 5px;
+                    padding-left: 1vw;
+                    font-family: $proxima;
+                    font-size: 20px;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: 0.6px;
+                    text-align: left;
+                }
+            }
+            >div {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+                margin-top: 34px;
+                >input {
+                    width: 160px;
+                    padding: .5em 1em;
+                    margin: 0;
+                    border: 0;
+                    border-radius: 25px;
+                    font-family: $proxima;
+                    font-size: 18px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: center;
+                    background-color: #ff0f73e0;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: all .3s ease-in;
+                }
+                >a {
+                    font-family: $proxima;
+                    font-size: 18px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: rgb(136, 136, 136);
+                }
+            }
+        }
+    }
+    >footer {
+        >p {
+            font-family: $proxima;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: center;
+            color: rgb(136, 136, 136);
+            >a {
+                margin-left: 8px;
+                font-family: $proxima;
+                font-size: 18px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                text-align: center;
+                color: rgb(136, 136, 136);
+            }
+        }
+    }
+}
+
+//pop-up
+aside {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 350px;
+    border-radius: 8px;
+    transform: translate(-50vw, 0);
+    background-color: rgba(90, 92, 134, 0.829);
+    transition: all .5s ease-in;
+    >p {
+        width: 80%;
+        padding: 1em 1em;
+        font-family: $proxima;
+        font-size: 32px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.6px;
+        text-align: center;
+        color: #000;
+        opacity: .8;
+    }
+}
+
+//animations
+section>form:hover {
+    box-shadow: 8px 6px 40px 20px rgba(32, 94, 171, 0.18);
+}
+
+div>input:hover {
+    transform: scale(1.050);
+    box-shadow: 4px 4px 14px 4px rgba(32, 94, 171, 0.18);
+}
+
+header>span:hover {
+    animation: circle-puls 2s infinite ease-in-out;
+}
+
+.helloAnim {
+    transform: translate(0, 0);
+}
+
+@keyframes circle-puls {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(.3);
+    }
+    40% {
+        transform: scale(1)
+    }
+    60% {
+        transform: scale(.5)
+    }
+    80% {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(.8)
+    }
+}

@@ -1,0 +1,7 @@
+@import '_mixins';
+@include font-face("ProximaNova", "/assets/fonts/ProximaNova-Regular/ProximaNova-Regular", normal);
+@include font-face("ProximaNova", "/assets/fonts/ProximaNova-Light/ProximaNova-Light", 300);
+@include font-face("ProximaNova", "/assets/fonts/ProximaNova-Bold/ProximaNova-Bold", bold);
+@include font-face("ProximaNova", "/assets/fonts/ProximaNova-Semibold/ProximaNova-Semibold", 600);
+$proxima: 'ProximaNova',
+sans-serif;
